@@ -245,6 +245,9 @@ section.main__row-info .info__row .info__row-content img {
   }
 }
 @media (max-width: 480px) {
+  .header-container nav ul {
+    width: 100%;
+  }
   section.main-container .main__row-text {
     padding: 15px;
     width: 100%;
