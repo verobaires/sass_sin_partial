@@ -37,12 +37,32 @@
   border: 0px;
 }
 
+/* EACH CON MAPA*/
+.fontsize-1 {
+  font-size: 1rem;
+}
+
+.fontsize-2 {
+  font-size: 1.05rem;
+}
+
+.fontsize-3 {
+  font-size: 1.5rem;
+}
+
+.fontsize-4 {
+  font-size: 2.75rem;
+}
+
+.fontsize-5 {
+  font-size: 2.8rem;
+}
+
 /* estilos generales independientes de la anidacion */
 html,
 body {
   font-family: "Nunito Sans", sans-serif;
   line-height: 1.6;
-  /* background: #040404; */
   background: #040404;
   color: #fff;
 }
@@ -75,13 +95,11 @@ main {
   font-weight: 200;
 }
 
-/*  line-height: 1.6; */
 .text-h3 {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/*  line-height: 1.6; */
 .text-p {
   font-size: 1.05rem;
   font-weight: 700;
@@ -208,8 +226,8 @@ section.main__row-info .info__row .info__row-content img {
   justify-content: center;
   align-items: center;
   /*   display: flex;
-  justify-content: center;
-  align-items: center; */
+    justify-content: center;
+    align-items: center; */
   gap: 20px;
   color: #bfc4ca;
   font-size: 2.5rem;
