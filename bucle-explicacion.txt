@@ -1,0 +1,14 @@
+/*clave= $key, valor=$font para el bucle de  $font-size:
+$key es la clave (1,2,3,4,5).
+$font es el valor asociado (1rem, 1.05rem,  1.5rem, 2.75rem, 2.8rem).
+.fontsize-#{$key}: Se crea una clase CSS cuyo nombre incluye la clave. La sintaxis #{$key} es para insertar el valor de la variable en el nombre de la clase. Por ejemplo, si $key es "1", la clase será .fontsize-1
+font-size: $font; $font vale por la propiedad font-size*/
+
+
+//.fontsize-1{font-size: 1rem}
+//.fontsize-2{font-size: 1.05rem}
+//.fontsize-3{font-size: 1.5rem}
+//.fontsize-4{font-size: 2.75rem}
+//.fontsize-5{font-size: 2.8rem}
+
+

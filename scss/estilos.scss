@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* variables */
+$main-background: #040404;
+$padding-h1: 20px;
+
+/* mixin */
+
+@mixin flexbox ($direccion, $jcontent, $align) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $jcontent;
+    align-items: $align;
+}
+
+/* extend */
+.btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 40px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.btn__light {
+    @extend .btn;
+    background: #BFC4CA;
+    border: none;
+    color: #040404;
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+}
+
+.btn__dark {
+    @extend .btn;
+    background: #fa891f;
+    color: #040404;
+
+    &:hover {
+        background-color: #bb5113;
+        border: 0px;
+    }
+
+}
+
+
+/* estilos generales independientes de la anidacion */
+
+
+html,
+body {
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.6;
+    /* background: #040404; */
+    background: $main-background;
+    color: #fff;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    padding-bottom: $padding-h1;
+}
+
+main {
+    padding: 15px;
+}
+
+.text-h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-h2 {
+    font-size: 2.8rem;
+    font-weight: 200;
+}
+
+/*  line-height: 1.6; */
+.text-h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*  line-height: 1.6; */
+.text-p {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+
+
+/* anidacion */
+.header-container {
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 20px;
+
+    nav {
+        display: flex;
+        justify-content: end;
+        height: 50px;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+    }
+}
+
+section.main-container {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    flex-wrap: wrap;
+
+    .main__row-text {
+        width: 50%;
+        padding-right: 40px;
+        padding-top: 80px;
+
+        a {
+            margin-top: 30px;
+
+            &:nth-child(3) {
+                background: #bfc4ca;
+                border: none;
+                color: #040404;
+
+                &:hover {
+                    background-color: #f4f4f4;
+                }
+            }
+
+            &:nth-child(4) {
+                background: #fa891f;
+                color: #040404;
+
+                &:hover {
+                    background-color: #bb5113;
+                    border: 0px;
+                }
+            }
+        }
+    }
+
+    .main__row-form {
+        width: 40%;
+        margin-left: 90px;
+
+        .form-logo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-size: 5rem;
+            padding: 30px;
+            background-image: linear-gradient(to right, #bb5113, #e2871f);
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        form {
+            background: #fff;
+            padding: 50px 50px 70px 50px;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+            label {
+                display: inline-block;
+                margin-bottom: 6px;
+                color: #4d4d4d;
+            }
+
+            .form-group {
+                margin-bottom: 16px;
+
+                .form-control {
+                    width: 100%;
+                    padding: 10px 12px;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #4d4d4d;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+section.main__row-info {
+    padding: 50px 20px;
+    background: #ff5c08fc;
+    color: #050505;
+
+    h2 {
+        padding-bottom: 40px;
+    }
+
+    .info__row {
+        display: flex;
+        padding-bottom: 40px;
+        padding-top: 20px;
+
+        .info__row-content {
+            padding-right: 40px;
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                clip-path: circle(50% at 50% 50%);
+            }
+        }
+    }
+}
+
+.footer {
+    height: 80px;
+    @include flexbox(row, center, center);
+    /*   display: flex;
+  justify-content: center;
+  align-items: center; */
+    gap: 20px;
+    color: #bfc4ca;
+    font-size: 2.5rem;
+    background: $main-background;
+
+    i:hover {
+        color: #fa891f;
+    }
+}
+
+@media (max-width: 767px) {
+    ul {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 6px 10px;
+    }
+
+    .text-h1 {
+        font-size: 2.75rem;
+    }
+
+    .main__row-info {
+        .info__row {
+            flex-wrap: wrap;
+        }
+    }
+
+    .main__row-form {
+        width: 80%;
+        margin-left: 90px;
+        margin: auto;
+    }
+
+    .main__row-text {
+        width: 100%;
+        padding-right: 40px;
+        padding-top: 80px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main__row-info .info__row-content {
+        width: 69%;
+        margin: 0 auto;
+    }
+}
+
+
+/* sass
+
+1-anidacion
+2-variable
+3-mixin
+4-extend
+5-condicional
+6-map
+7-bucle  
+8-each
+*/
+
+/* CONDICIONAL para background general tiene que ir abajo */
+$season : none;
+//carnaval, pascua, navidad
+
+@if $season == carnaval {
+    body {
+      background-image: url("../img/carnaval-banner.png");
+    }
+  } @else if $season == pascua {
+    body {
+      background-image: url("../img/eastern-banner.png");
+    }
+  } @else if $season == navidad {
+    body {
+      background-image: url("../img/christmas-banner.png");
+    }
+  }

@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* variables */
+/* mixin */
+/* extend */
+.btn, .btn__dark, .btn__light {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.btn__light {
+  background: #BFC4CA;
+  border: none;
+  color: #040404;
+}
+.btn__light:hover {
+  background-color: #f4f4f4;
+}
+
+.btn__dark {
+  background: #fa891f;
+  color: #040404;
+}
+.btn__dark:hover {
+  background-color: #bb5113;
+  border: 0px;
+}
+
+/* estilos generales independientes de la anidacion */
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  /* background: #040404; */
+  background: #040404;
+  color: #fff;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+main {
+  padding: 15px;
+}
+
+.text-h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.text-h2 {
+  font-size: 2.8rem;
+  font-weight: 200;
+}
+
+/*  line-height: 1.6; */
+.text-h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*  line-height: 1.6; */
+.text-p {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* anidacion */
+.header-container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+.header-container nav {
+  display: flex;
+  justify-content: end;
+  height: 50px;
+  align-items: center;
+}
+.header-container nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+section.main-container {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+section.main-container .main__row-text {
+  width: 50%;
+  padding-right: 40px;
+  padding-top: 80px;
+}
+section.main-container .main__row-text a {
+  margin-top: 30px;
+}
+section.main-container .main__row-text a:nth-child(3) {
+  background: #bfc4ca;
+  border: none;
+  color: #040404;
+}
+section.main-container .main__row-text a:nth-child(3):hover {
+  background-color: #f4f4f4;
+}
+section.main-container .main__row-text a:nth-child(4) {
+  background: #fa891f;
+  color: #040404;
+}
+section.main-container .main__row-text a:nth-child(4):hover {
+  background-color: #bb5113;
+  border: 0px;
+}
+section.main-container .main__row-form {
+  width: 40%;
+  margin-left: 90px;
+}
+section.main-container .main__row-form .form-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  padding: 30px;
+  background-image: linear-gradient(to right, #bb5113, #e2871f);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+section.main-container .main__row-form form {
+  background: #fff;
+  padding: 50px 50px 70px 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+section.main-container .main__row-form form label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #4d4d4d;
+}
+section.main-container .main__row-form form .form-group {
+  margin-bottom: 16px;
+}
+section.main-container .main__row-form form .form-group .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #4d4d4d;
+  border-radius: 20px;
+}
+
+section.main__row-info {
+  padding: 50px 20px;
+  background: rgba(255, 92, 8, 0.9882352941);
+  color: #050505;
+}
+section.main__row-info h2 {
+  padding-bottom: 40px;
+}
+section.main__row-info .info__row {
+  display: flex;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+section.main__row-info .info__row .info__row-content {
+  padding-right: 40px;
+}
+section.main__row-info .info__row .info__row-content img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*   display: flex;
+  justify-content: center;
+  align-items: center; */
+  gap: 20px;
+  color: #bfc4ca;
+  font-size: 2.5rem;
+  background: #040404;
+}
+.footer i:hover {
+  color: #fa891f;
+}
+
+@media (max-width: 767px) {
+  ul {
+    width: 100%;
+  }
+  .btn, .btn__light, .btn__dark {
+    padding: 6px 10px;
+  }
+  .text-h1 {
+    font-size: 2.75rem;
+  }
+  .main__row-info .info__row {
+    flex-wrap: wrap;
+  }
+  .main__row-form {
+    width: 80%;
+    margin-left: 90px;
+    margin: auto;
+  }
+  .main__row-text {
+    width: 100%;
+    padding-right: 40px;
+    padding-top: 80px;
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .main__row-info .info__row-content {
+    width: 69%;
+    margin: 0 auto;
+  }
+}
+/* sass
+
+1-anidacion
+2-variable
+3-mixin
+4-extend
+5-condicional
+6-map
+7-bucle  
+8-each
+*/
+/* CONDICIONAL para background general tiene que ir abajo */
+
+/*# sourceMappingURL=estilos.css.map */
